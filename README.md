@@ -169,13 +169,18 @@ Remember to always test your Terraform configurations in a safe environment befo
 
 ## Overview
 
-This Terraform module is designed to manage a Snowflake pipe and its associated permissions. 
+The `terraform-snowflake-functions` is a Terraform module designed to streamline the creation, configuration, and management of user-defined functions in Snowflake, a cloud-based data warehousing platform.
 
-A Snowflake pipe is a named object in Snowflake that defines a data stream from an external source. This module allows you to create such a pipe with various configurations like automatic ingestion of new files, notification channels, and a custom copy statement.
+Key features of this module include:
 
-The module also manages the permissions for the Snowflake pipe. It grants specified privileges to specified roles. The module provides flexibility in terms of applying the grant to future pipes in the schema, allowing the roles to grant the privilege to other roles, and enabling the privilege to be granted to the roles multiple times.
+1. `User-Defined Function Creation`: Enables the creation of functions with custom names, return types, and function bodies.
+2. `Language Support`: Supports functions written in JavaScript and a Python variant, aligning with Snowflake's language support for user-defined functions.
+3. `Function Configuration`: Provides options to configure various function attributes such as security settings, null input behavior, return behavior, and JavaScript runtime version.
+4. `Database and Schema Specification`: Allows users to define the specific database and schema where the function should be created.
+5. `Argument Management`: Facilitates the specification of function arguments, including their names and types.
+6. `Import and Package Management`: Supports the inclusion of additional JavaScript libraries and Snowflake packages within the function.
 
-In summary, this module provides a structured and reusable way to create and manage Snowflake pipes and their permissions in a Terraform configuration.
+In essence, the `terraform-snowflake-functions` module provides a declarative, version-controlled, and automated approach to managing Snowflake function deployments.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
