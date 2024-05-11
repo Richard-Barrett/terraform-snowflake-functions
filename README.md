@@ -1,6 +1,6 @@
 <img align="right" width="60" height="60" src="images/terraform.png">
 
-# terraform-snowflake-pipes
+# terraform-snowflake-functions
 
 Terraform Module for Managing Snowflake Functions
 
