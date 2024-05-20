@@ -17,14 +17,14 @@ provider "snowflake" {}
 module "my_javascript_function" {
   source = "../.." # Path to the root of the module
 
-  database = "my_database"
-  schema = "my_schema"
-  name = "my_javascript_function"
+  database    = "my_database"
+  schema      = "my_schema"
+  name        = "my_javascript_function"
   return_type = "STRING"
-  statement = <<-EOF
+  statement   = <<-EOF
     function my_javascript_function() {
         return 'Hello, World!';
     }
     EOF
-  language = "JAVASCRIPT"
+  language    = "JAVASCRIPT"
 }
